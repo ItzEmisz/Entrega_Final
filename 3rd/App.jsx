@@ -7,21 +7,18 @@ import GsapEffects from "./GsapEffects";
 
 export function TextCursorArea() {
   return (
-    <>
-      <GsapEffects />
-      <div style={{ width: "100%", height: "50vh", display: "flex", alignItems: "center", justifyContent: "center" }}>
-        <TextCursor
-          text="Hello!"
-          delay={0.01}
-          spacing={80}
-          followMouseDirection={true}
-          randomFloat={true}
-          exitDuration={0.3}
-          removalInterval={20}
-          maxPoints={10}
-        />
-      </div>
-    </>
+    <div style={{ width: "100%", height: "50vh", display: "flex", alignItems: "center", justifyContent: "center" }}>
+      <TextCursor
+        text="Hello!"
+        delay={0.01}
+        spacing={80}
+        followMouseDirection={true}
+        randomFloat={true}
+        exitDuration={0.3}
+        removalInterval={20}
+        maxPoints={10}
+      />
+    </div>
   );
 }
 
@@ -35,4 +32,15 @@ export function PixelCardArea() {
 
 export function Cube3DArea() {
   return <Cube3D />;
+}
+
+export function AppRoot() {
+  return (
+    <>
+      <GsapEffects />
+      <TextCursorArea />
+      <PixelCardArea />
+      <Cube3DArea />
+    </>
+  );
 }
