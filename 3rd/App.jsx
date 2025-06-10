@@ -7,7 +7,6 @@ import GsapEffects from "./GsapEffects";
 
 export function TextCursorArea() {
   return (
-      <TextCursor
     <>
       <GsapEffects />
       <div style={{ width: "100%", height: "50vh", display: "flex", alignItems: "center", justifyContent: "center" }}>
