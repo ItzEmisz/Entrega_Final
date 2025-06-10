@@ -1,0 +1,151 @@
+/* style.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100vw;
+  height: 100vh;
+  min-height: 100vh;
+  font-family: sans-serif;
+  overflow-x: hidden;
+  background: #000 !important;
+}
+
+/* 
+Div para scroll
+*/
+.spacer {
+  height: 2000vh;
+  background-color: #ffffff;
+}
+
+/* 
+  La caja
+*/
+.box {
+  width: 200px;
+  height: 200px;
+  margin-left: 0; 
+  background-color: #3498db;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  position: relative;
+  z-index: 10;
+}
+
+/* Poster 1*/
+.poster-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.poster-base {
+  width: 100%;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+.poster-blur {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  filter: blur(8px);
+  opacity: 1; 
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+.texto {
+  position: absolute;
+  top: 560px;
+  left: 340px;
+  width: 30%;
+  z-index: 3;  /* mayor que la poster-blur (z-index:2) */
+  mix-blend-mode: overlay;
+}
+
+.rectangulo {
+  position: absolute;
+  top: 270px;
+  left: 270px;
+  width: 70%;
+  z-index: 3;  /* mayor que la poster-blur (z-index:2) */
+}
+
+.cruz {
+  position: absolute;
+  top: 370px;
+  left: 860px;
+  width: 4%;
+  z-index: 3;  /* mayor que la poster-blur (z-index:2) */
+}
+
+/* Poster P3 */
+.poster-container.poster-p3 {
+  position: relative;
+  width: 1911px;
+  height: 1196px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.poster-p3 .poster-base2 {
+  width: 1911px;
+  height: 1196px;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+/* Layer 1 */
+.poster-p3 .poster-layer1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: auto;
+  z-index: 2;
+}
+
+/* Layer 2 */
+.poster-p3 .poster-layer2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: auto;
+  z-index: 6; /* el más alto */
+}
+
+/* Layer 3 */
+.poster-p3 .poster-layer3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: auto;
+  z-index: 4;
+}
+
+/* Layer 4 */
+.poster-p3 .poster-layer4 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: auto;
+  z-index: 5;
+}

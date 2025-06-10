@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Póster Sticky con GSAP</title>
+    <link rel="stylesheet" href="main.css" />
+
+    <!-- GSAP y ScrollTrigger desde CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollTrigger.min.js"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+    <!-- Contenedor para la zona reactiva de texto arriba del poster -->
+    <div id="react-root-text"></div>
+
+    <div class="poster-container">
+      <!-- Capa enfocada (sharp) -->
+      <img src="Posters/P1/Cuadro_1_0005_Capa-0.png"
+           class="poster-base"
+           alt="Capa enfocada" />
+
+      <!-- Capa borrosa (blur) -->
+      <img src="Posters/P1/Cuadro_1_0004_Capa-0-copia.png"
+           class="poster-blur"
+           alt="Capa borrosa" />
+
+      <img src="Posters/P1/Cuadro_1_0003_Defined-by-the-undefined..png"
+           class="texto"
+           alt="texto" />
+
+      <img src="Posters/P1/Cuadro_1_0000_Rectángulo-1.png" 
+      class="rectangulo" 
+      alt="Rectángulo" />
+
+      <img src="Posters/P1/cruz.png" 
+      class="cruz" 
+      alt="cruz" />
+    </div>
+
+    <!-- Caja y contenido de scroll -->
+    <div class="box">yaaaay!</div>
+
+    <!-- pixeles -->
+    <div id="react-root-pixel"></div>
+    
+    <!-- poster P3 -->
+    <div class="poster-container poster-p3">
+      <img src="Posters/P3/Recurso 7.png" class="poster-base2" alt="Fondo P3" />
+      <img src="Posters/P3/Recurso 6.png" class="poster-layer1" alt="Capa 6 P3" />
+      <img src="Posters/P3/Recurso 5.png" class="poster-layer2" alt="Capa 5 P3" />
+      <img src="Posters/P3/Recurso 4.png" class="poster-layer3" alt="Capa 4 P3" />
+      <img src="Posters/P3/Recurso 3.png" class="poster-layer4" alt="Capa 3 P3" />
+    </div>
+c      <script src="main.js"></script>
+    <script type="module" src="/main.jsx"></script>
+  </body>
+</html>
