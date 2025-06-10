@@ -6,7 +6,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "vercel --prod"
   },
   "keywords": [],
   "author": "",
@@ -17,7 +18,8 @@
     "gsap": "^3.13.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "three": "^0.177.0"
+    "three": "^0.177.0",
+    "vercel": "^42.3.0"
   },
   "devDependencies": {
     "vite": "^6.3.5"

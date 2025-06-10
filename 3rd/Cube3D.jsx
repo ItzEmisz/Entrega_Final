@@ -24,7 +24,8 @@ const Cube3D = () => {
     const light = new THREE.PointLight(0xffffff, 1, 1000);
     light.position.set(100, 100, 200);
     scene.add(light);
-        // Luz direccional extra para resaltar el modelo
+    
+        // Luz direccional 
     const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
     directionalLight.position.set(-200, 400, 400);
     scene.add(directionalLight);
