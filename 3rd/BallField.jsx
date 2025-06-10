@@ -26,14 +26,15 @@ const BallField = () => {
   useEffect(() => {
     if (!size.width || !size.height) return;
     // Inicializa
-    const minDist = 80; // distancia mínima entre centros
+    const minDist = 80;
     const balls = [];
     let attempts = 0;
     while (balls.length < 26 && attempts < 1000) {
       const radius = Math.random() * 48 + 12;
       const x = Math.random() * (size.width - 2 * radius) + radius;
       const y = Math.random() * (size.height - 2 * radius) + radius;
-      // Verifica que no se encimen
+
+      //que no se encimen
       let overlaps = false;
       for (let b of balls) {
         const dist = Math.sqrt((b.x - x) ** 2 + (b.y - y) ** 2);
@@ -76,6 +77,7 @@ const BallField = () => {
           ball.vx += Math.cos(angle) * force;
           ball.vy += Math.sin(angle) * force;
         }
+
         // Restaurar a posición base
         const dx = ball.baseX - ball.x;
         const dy = ball.baseY - ball.y;
@@ -149,10 +151,6 @@ const BallField = () => {
   );
 };
 
-function randomColor() {
-  const colors = ["#38bdf8", "#fbbf24", "#f472b6", "#a3e635", "#f87171", "#818cf8"];
-  return colors[Math.floor(Math.random() * colors.length)];
-}
 
 function distance(x1, y1, x2, y2) {
   return Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2);

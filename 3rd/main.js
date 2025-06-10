@@ -1,4 +1,7 @@
 // main.js
+console.log('main.js');
+console.log('gsap', gsap);
+
 
 // 1.ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
@@ -39,7 +42,7 @@ gsap.to([".poster-blur", ".texto", ".rectangulo", ".cruz"], {
 // Define la posición inicial, escala y parallax para cada capa
 const layers = [
   { selector: '.poster-layer1', x: '0%', y: '0%', scale: 1.2, parallax: -400 },
-  { selector: '.poster-layer2', x: '-37%', y: '-13%', scale: 0.25, parallax: 0 },
+  { selector: '.poster-layer2', x: '-37%', y: '-13%', scale: 0.25, parallax: 1500 },
   { selector: '.poster-layer3', x: '0%', y: '15%', scale: 1.2, parallax: 400 },
   { selector: '.poster-layer4', x: '0%', y: '35%', scale: 1.2, parallax: 800 }
 ];
@@ -55,12 +58,12 @@ layers.forEach((layer) => {
   // Aplica el parallax solo si parallax vale distinto de 0
   if (layer.parallax !== 0) {
     gsap.to(layer.selector, {
-      y: "+=" + layer.parallax + "px",
+      x: "+=" + layer.parallax + "px",
       ease: 'none',
       scrollTrigger: {
         trigger: '.poster-container.poster-p3',
-        start: 'top bottom',
-        end: 'bottom top',
+        start: 'widh +=1000vh',
+        end: 'widh+=1000vh',
         scrub: true,
         // markers: true
       }
